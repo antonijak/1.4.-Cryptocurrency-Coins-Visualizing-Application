@@ -7,25 +7,25 @@ const CoinList = (props) => {
       <div>
         <div id="container">
           <div id="legend">
-              <button className="legend-span">
-                <span>NUMBER</span>
+              <button className="legend-span name">
+                <span>Name</span>
+              </button>
+              <button className="legend-span rank">
+                <span>Rank</span>
               </button>
               <button className="legend-span">
-                <span>NAME</span>
+                <span>Price</span>
               </button>
               <button className="legend-span">
-                <span>PRICE</span>
+                <span>Change(%)</span>
               </button>
               <button className="legend-span">
-                <span>RANK</span>
-              </button>
-              <button className="legend-span">
-                <span>CHANGE</span>
+                <span>Number</span>
               </button>
           </div>
         </div>
         <main>
-          <Coin coins={props.coins}/>
+          <Coin coins={props.coins} setClass={props.setClass}/>
         </main>
       </div>
   );

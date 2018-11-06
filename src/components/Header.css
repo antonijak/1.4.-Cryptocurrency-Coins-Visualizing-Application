@@ -1,7 +1,11 @@
 header {
-  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(160, 160, 160);
+  color: #595959;
+  padding: 1rem;
+}
+
+h1 {
+  padding-top: 3rem;
 }

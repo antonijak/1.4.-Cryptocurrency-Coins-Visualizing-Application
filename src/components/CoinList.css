@@ -1,8 +1,7 @@
 main {
-  width: 90%;
+  width: 70%;
   margin: auto;
   background-color: white;
-  padding: 5px 1rem;
   border: 1px solid #dedddd;
   border-top: none;
   border-bottom-left-radius: 10px;
@@ -10,7 +9,7 @@ main {
 }
 
 #container {
-  width: 90%;
+  width: 70%;
   border: 1px solid #dedddd;
   border-bottom: 1px solid #dedddd;
   border-top-left-radius: 10px;
@@ -24,29 +23,39 @@ main {
   justify-content: space-evenly;
   height: 3rem;
   width: 100%;
-  padding: 0 1rem;
 }
 
 .legend-span {
-  width: 20%;
-  text-align: left;
-  display: flex;
-  justify-content: left;
-  align-items: center;
+  width: 17.5%;
+  text-align: right;
   font-weight: bold;
   color: #595959;
   border: none;
   outline: none;
-  border-radius: 10px;
   padding: 0;
   padding-left: 1rem; 
+  padding-right: 1rem; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .legend-span span {
-  font-size: .7rem;
+  font-size: 1rem;
 }
 
 #legend_flag {
   padding: 0;
   padding-left: 1.5rem;
+}
+
+.name {
+  text-align: left;
+  justify-content: flex-start;
+  border-right: 1px solid #f0f0f0;
+  width: 30%;
+}
+
+.rank {
+  width: 10%;
 }

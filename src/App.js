@@ -9,9 +9,12 @@ class App extends Component {
   state = {
     coins: null
   };
+  setPriceClassName = (percentage) => {return percentage < 0 ? "coin-spec red" : "coin-spec"}
   componentDidMount () {
-    const url = 'https://api.coinmarketcap.com/v1/ticker/?limit=20';
-    fetch (url).then (response => response.json ()).then (coins => {
+    const url = 'https://api.coinmarketcap.com/v1/ticker/?limit=200';
+    fetch (url)
+    .then (response => response.json ())
+    .then (coins => {
       this.setState ({
         coins: coins,
       });
@@ -23,7 +26,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Search />
-        <CoinList coins={this.state.coins}/>
+        <CoinList coins={this.state.coins} setClass={this.setPriceClassName}/>
       </div>
     );
   }

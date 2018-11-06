@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.coin {
+  border-radius: 2px;
+  color: #595959;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-height: fit-content;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.coin-spec {
+  width: 17.5%;
+  padding: .5rem 1rem;
+  font-size: 16px;
+  text-align: right;
+  height: 3rem;
+  line-height: 2.1rem;
+}
+
+.red {
+  color: red
+}
+
+.rank {
+  width: 10%;
+}
+
+.name {
+  text-align: left;
+  border-right: 1px solid #f0f0f0;
+  width: 30%;
+}
