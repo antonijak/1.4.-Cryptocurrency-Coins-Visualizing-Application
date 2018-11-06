@@ -1,0 +1,52 @@
+main {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  padding: 5px 1rem;
+  border: 1px solid #dedddd;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#container {
+  width: 90%;
+  border: 1px solid #dedddd;
+  border-bottom: 1px solid #dedddd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color:  white;
+  margin: auto;
+}
+
+#legend {
+  display: flex;
+  justify-content: space-evenly;
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.legend-span {
+  width: 20%;
+  text-align: left;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-weight: bold;
+  color: #595959;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0;
+  padding-left: 1rem; 
+}
+
+.legend-span span {
+  font-size: .7rem;
+}
+
+#legend_flag {
+  padding: 0;
+  padding-left: 1.5rem;
+}
