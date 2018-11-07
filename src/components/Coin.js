@@ -5,7 +5,7 @@ const Coin = (props) => {
   const coins = props.coinsToDisplay != null
     ? props.coinsToDisplay.map (coin => {
         return (
-          <div className="coin">
+          <div className="coin" key={coin.id}>
             <span className="coin-spec name">{coin.name}</span>
             <span className="coin-spec rank">{coin.rank}</span>
             <span className="coin-spec">{parseFloat(coin.price_usd).toFixed(2)}</span>
