@@ -7,13 +7,13 @@ const CoinList = (props) => {
       <div>
         <div id="container">
           <div id="legend">
-              <button className="legend-span name">
+              <button className="legend-span name" onClick={()=> props.setSortingBy('name')}>
                 <span>Name</span>
               </button>
-              <button className="legend-span rank">
+              <button className="legend-span rank" onClick={()=> props.setSortingBy('rank')}>
                 <span>Rank</span>
               </button>
-              <button className="legend-span">
+              <button className="legend-span" onClick={()=> props.setSortingBy('price')}>
                 <span>Price</span>
               </button>
               <button className="legend-span">
@@ -25,7 +25,7 @@ const CoinList = (props) => {
           </div>
         </div>
         <main>
-          <Coin coins={props.coins} setClass={props.setClass}/>
+          <Coin coinsToDisplay={props.coinsToDisplay} setClass={props.setClass}/>
         </main>
       </div>
   );

@@ -2,8 +2,8 @@ import React from 'react';
 import './Coin.css'
 
 const Coin = (props) => {
-  const coins = props.coins != null
-    ? props.coins.map (coin => {
+  const coins = props.coinsToDisplay != null
+    ? props.coinsToDisplay.map (coin => {
         return (
           <div className="coin">
             <span className="coin-spec name">{coin.name}</span>

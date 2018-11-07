@@ -3,11 +3,11 @@ import './Search.css';
 import MagnifyIcon from './MagnifyIcon'
 
 
-const Search = () => {
+const Search = (props) => {
   return (
     <div className="input-container">
       <MagnifyIcon />
-      <input type="text" placeholder="search coins" id="search"></input>
+      <input type="text" placeholder="search coins" id="search" onInput={(e) => props.updateInputValue(e)}></input>
     </div>
   );
 }
