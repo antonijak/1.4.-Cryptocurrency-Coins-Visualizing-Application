@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 main {
   width: 70%;
   margin: auto;
@@ -25,23 +29,29 @@ main {
   width: 100%;
 }
 
-.legend-span {
+.legend-button {
   width: 17.5%;
-  text-align: right;
   font-weight: bold;
-  color: #595959;
+  color: #8a8a8a;
   border: none;
   outline: none;
   padding: 0;
   padding-left: 1rem; 
   padding-right: 1rem; 
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
-.legend-span span {
+.legend-title {
+  width: 100%;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.legend-title span {
+  margin-left: .5rem;
 }
 
 #legend_flag {
@@ -50,12 +60,24 @@ main {
 }
 
 .name {
-  text-align: left;
-  justify-content: flex-start;
   border-right: 1px solid #f0f0f0;
   width: 30%;
 }
 
+#name {
+  margin-left: 0;
+  margin-right: .5rem;
+}
+
+
+.name .legend-title {
+  justify-content: flex-start;
+}
+
 .rank {
   width: 10%;
+}
+
+.legend-button:hover svg {
+  fill: rgb(79, 79, 79);
 }

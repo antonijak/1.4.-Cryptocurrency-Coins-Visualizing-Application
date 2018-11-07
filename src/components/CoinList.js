@@ -1,26 +1,36 @@
 import React from 'react';
-import './CoinList.css'
-import Coin from './Coin'
+import Coin from './Coin';
+import './CoinList.css';
+import SortingIcon from './SortingIcon';
 
 const CoinList = (props) => {
   return (
       <div>
         <div id="container">
           <div id="legend">
-              <button className="legend-span name" onClick={()=> props.setSortingBy('name')}>
-                <span>Name</span>
+              <button className="legend-button name" onClick={()=> props.setSortingBy('name')}>
+                <div className="legend-title">
+                  <span id="name">Name</span>
+                  <SortingIcon sortDescending={props.sortDescendingName}/>
+                </div>
               </button>
-              <button className="legend-span rank" onClick={()=> props.setSortingBy('rank')}>
-                <span>Rank</span>
+              <button className="legend-button rank" onClick={()=> props.setSortingBy('rank')}>
+                <div className="legend-title">
+                  <SortingIcon sortDescending={props.sortDescendingRank}/>
+                  <span>Rank</span>
+                </div>
               </button>
-              <button className="legend-span" onClick={()=> props.setSortingBy('price')}>
-                <span>Price</span>
+              <button className="legend-button" onClick={()=> props.setSortingBy('price')}>
+                <div className="legend-title">
+                  <SortingIcon sortDescending={props.sortDescendingPrice}/>
+                  <span>Price</span>
+                </div>
               </button>
-              <button className="legend-span">
-                <span>Change(%)</span>
+              <button className="legend-button">
+                <div className="legend-title">Change(%)</div>
               </button>
-              <button className="legend-span">
-                <span>Number</span>
+              <button className="legend-button">
+                <div className="legend-title">Number</div>
               </button>
           </div>
         </div>
