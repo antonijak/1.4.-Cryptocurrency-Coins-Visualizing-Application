@@ -13,6 +13,10 @@
   border-bottom: 1px solid #f0f0f0;
 }
 
+.coin:hover {
+  background-color: rgb(247, 247, 247);
+}
+
 .coin-spec {
   width: 17.5%;
   padding: .5rem 1rem;
@@ -22,15 +26,19 @@
   line-height: 2.1rem;
 }
 
-.red {
-  color: red
+.green {
+  color: rgb(114, 184, 114);
 }
 
-.rank {
+.red {
+  color: rgb(249, 100, 100)
+}
+
+.rank-coin {
   width: 10%;
 }
 
-.name {
+.name-coin {
   text-align: left;
   border-right: 1px solid #f0f0f0;
   width: 30%;

@@ -20,17 +20,17 @@ const CoinList = (props) => {
                   <span>Rank</span>
                 </div>
               </button>
-              <button className="legend-button" onClick={()=> props.setSortingBy('price')}>
+              <button className="legend-button price" onClick={()=> props.setSortingBy('price')}>
                 <div className="legend-title">
                   <SortingIcon sortDescending={props.sortDescendingPrice}/>
                   <span>Price</span>
                 </div>
               </button>
-              <button className="legend-button">
+              <button className="legend-button change">
                 <div className="legend-title">Change(%)</div>
               </button>
-              <button className="legend-button">
-                <div className="legend-title">Number</div>
+              <button className="legend-button amount">
+                <div className="legend-title">Amount</div>
               </button>
           </div>
         </div>

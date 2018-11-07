@@ -36,11 +36,53 @@ main {
   border: none;
   outline: none;
   padding: 0;
-  padding-left: 1rem; 
   padding-right: 1rem; 
   display: flex;
   align-items: center;
+  position: relative;
 }
+
+.legend-button:hover::after {
+  position: absolute;
+  top: 48px;
+  font-size: .8rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  padding: 0 .5rem;
+  background-color: rgba(108, 108, 108, 0.886);
+  color: white;
+  border-radius: 2px;
+}
+
+.name:hover::after {
+  content: "The name of the criptocurrency";
+}
+
+.rank:hover::after {
+  content: "The rank of the criptocurrency";
+  left: 45%;
+  right: -10rem;
+}
+
+.price:hover::after {
+  content: "The price in USD";
+  left: 68%;
+  right: -4rem;
+}
+
+.change:hover::after {
+  content: "The change in price in the last 24 hours";
+  left: 42%;
+  right: -10rem;
+}
+
+.amount:hover::after {
+  content: "Total supply of cryptocurrency";
+  left: 55%;
+  right: -8rem;
+}
+
+
 
 .legend-title {
   width: 100%;
@@ -62,6 +104,7 @@ main {
 .name {
   border-right: 1px solid #f0f0f0;
   width: 30%;
+  padding-left: 1rem;
 }
 
 #name {

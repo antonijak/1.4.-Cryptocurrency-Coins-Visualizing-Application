@@ -15,7 +15,7 @@ class App extends Component {
     sortDescendingRank: true,
     sortDescendingPrice: false
   };
-  setPriceClassName = (percentage) => { return percentage < 0 ? "coin-spec red" : "coin-spec" }
+  setPriceClassName = (percentage) => { return percentage < 0 ? "coin-spec red" : "coin-spec green" }
   setSortingBy = (value ) => {
     if (value === 'name' && this.state.sortDescendingName === true) {
       this.setState ({ 
