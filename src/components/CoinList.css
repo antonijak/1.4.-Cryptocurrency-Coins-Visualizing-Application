@@ -41,7 +41,7 @@ main {
 }
 
 .legend-button:hover svg {
-  fill: rgb(79, 79, 79);
+  fill: rgb(169, 169, 169);
 }
 
 .legend-button:hover::after {
