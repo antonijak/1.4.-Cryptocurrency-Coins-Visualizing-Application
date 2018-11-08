@@ -7,3 +7,10 @@
   padding-bottom: 2px;
 }
 
+.visible {
+  fill: rgb(79, 79, 79);
+  padding-bottom: 2px;
+  box-sizing: border-box;
+  height: 1.2rem;
+  padding-bottom: 2px;
+}

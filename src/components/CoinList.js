@@ -8,34 +8,52 @@ const CoinList = (props) => {
       <div>
         <div id="container">
           <div id="legend">
+
               <button className="legend-button name" onClick={()=> props.setSortingBy('name')}>
                 <div className="legend-title">
                   <span id="name">Name</span>
-                  <SortingIcon sortDescending={props.sortDescendingName}/>
+                  <SortingIcon 
+                    sortAscending={props.sortAscendingName}
+                    theClassName={props.nameClassName}
+                  />
                 </div>
               </button>
+
               <button className="legend-button rank" onClick={()=> props.setSortingBy('rank')}>
                 <div className="legend-title">
-                  <SortingIcon sortDescending={props.sortDescendingRank}/>
+                  <SortingIcon 
+                    sortAscending={props.sortAscendingRank}
+                    theClassName={props.rankClassName}
+                  />
                   <span>Rank</span>
                 </div>
               </button>
+
               <button className="legend-button price" onClick={()=> props.setSortingBy('price')}>
                 <div className="legend-title">
-                  <SortingIcon sortDescending={props.sortDescendingPrice}/>
+                  <SortingIcon 
+                    sortAscending={props.sortAscendingPrice}
+                    theClassName={props.priceClassName}
+                  />
                   <span>Price</span>
                 </div>
               </button>
+
               <button className="legend-button change">
                 <div className="legend-title">Change(%)</div>
               </button>
+
               <button className="legend-button amount">
                 <div className="legend-title">Amount</div>
               </button>
+
           </div>
         </div>
         <main>
-          <Coin coinsToDisplay={props.coinsToDisplay} setClass={props.setClass}/>
+          <Coin 
+            coinsToDisplay={props.coinsToDisplay} 
+            setClass={props.setClass}
+          />
         </main>
       </div>
   );

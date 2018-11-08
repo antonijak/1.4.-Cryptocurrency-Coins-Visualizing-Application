@@ -6,11 +6,21 @@ const Coin = (props) => {
     ? props.coinsToDisplay.map (coin => {
         return (
           <div className="coin" key={coin.id}>
-            <span className="coin-spec name-coin">{coin.name}</span>
-            <span className="coin-spec rank-coin">{coin.rank}</span>
-            <span className="coin-spec">{parseFloat(coin.price_usd).toFixed(2)}</span>
-            <span className={props.setClass(coin.percent_change_24h)}>{coin.percent_change_24h}</span>
-            <span className="coin-spec">{coin.total_supply}</span>
+            <span className="coin-spec name-coin">
+              {coin.name}
+            </span>
+            <span className="coin-spec rank-coin">
+              {coin.rank}
+            </span>
+            <span className="coin-spec">
+              {parseFloat(coin.price_usd).toFixed(2)}
+            </span>
+            <span className={props.setClass(coin.percent_change_24h)}>
+              {coin.percent_change_24h}
+            </span>
+            <span className="coin-spec">
+              {coin.total_supply}
+            </span>
           </div>
         );
       })

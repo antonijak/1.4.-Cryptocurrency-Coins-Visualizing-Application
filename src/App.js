@@ -4,64 +4,87 @@ import Search from './components/Search';
 import Header from './components/Header';
 import CoinList from './components/CoinList';
 
-
 class App extends Component {
   state = {
     coins: null,
     userInput: null,
     coinsToDisplay: this.coins,
     sortBy: 'name',
-    sortDescendingName: false,
-    sortDescendingRank: true,
-    sortDescendingPrice: false
+    sortAscendingName: false,
+    sortAscendingRank: true,
+    sortAscendingPrice: false,
+    nameClassName: 'arrow-icon',
+    rankClassName: 'arrow-icon',
+    priceClassName: 'arrow-icon'
   };
+  //sets the color of the price (green or red)
   setPriceClassName = (percentage) => { return percentage < 0 ? "coin-spec red" : "coin-spec green" }
-  setSortingBy = (value ) => {
-    if (value === 'name' && this.state.sortDescendingName === true) {
+  //when clicking on column header coins get sorted by the value of header in ascending or descending order
+  setSortingBy = (value) => {
+    if (value === 'name' && this.state.sortAscendingName === true) {
       this.setState ({ 
         coinsToDisplay: this.state.coinsToDisplay.sort((a, b) => b.name.localeCompare(a.name)),
         sortBy: value,
-        sortDescendingName: false
+        sortAscendingName: false,
+        nameClassName: 'visible',
+        rankClassName: 'arrow-icon',
+        priceClassName: 'arrow-icon'
       });
 
-    } else if (value === 'name' && this.state.sortDescendingName === false) {
+    } else if (value === 'name' && this.state.sortAscendingName === false) {
       this.setState ({ 
         coinsToDisplay: this.state.coinsToDisplay.sort((a, b) => a.name.localeCompare(b.name)),
         sortBy: value,
-        sortDescendingName: true
+        sortAscendingName: true,
+        nameClassName: 'visible',
+        rankClassName: 'arrow-icon',
+        priceClassName: 'arrow-icon'
       });
 
-    } else if (value === 'rank' && this.state.sortDescendingRank === true) {
+    } else if (value === 'rank' && this.state.sortAscendingRank === true) {
       this.setState ({ 
         coinsToDisplay: this.state.coinsToDisplay.sort((a, b) => b.rank - a.rank), 
         sortBy: value,
-        sortDescendingRank: false
+        sortAscendingRank: false,
+        nameClassName: 'arrow-icon',
+        rankClassName: 'visible',
+        priceClassName: 'arrow-icon'
       });
 
-    } else if (value === 'rank' && this.state.sortDescendingRank === false) {
+    } else if (value === 'rank' && this.state.sortAscendingRank === false) {
       this.setState ({ 
         coinsToDisplay: this.state.coinsToDisplay.sort((a, b) => a.rank - b.rank), 
         sortBy: value,
-        sortDescendingRank: true
+        sortAscendingRank: true,
+        nameClassName: 'arrow-icon',
+        rankClassName: 'visible',
+        priceClassName: 'arrow-icon'
       });
 
-    } else if (value === 'price' && this.state.sortDescendingPrice === true) {
+    } else if (value === 'price' && this.state.sortAscendingPrice === true) {
       this.setState ({ 
         coinsToDisplay: this.state.coinsToDisplay.sort((a, b) => parseFloat(b.price_usd) - parseFloat(a.price_usd)), 
-        sortBy: value ,
-        sortDescendingPrice: false 
+        sortBy: value,
+        sortAscendingPrice: false,
+        nameClassName: 'arrow-icon',
+        rankClassName: 'arrow-icon',
+        priceClassName: 'visible' 
       });
 
-    } else if (value === 'price' && this.state.sortDescendingPrice === false) {
+    } else if (value === 'price' && this.state.sortAscendingPrice === false) {
       this.setState ({ 
         coinsToDisplay: this.state.coinsToDisplay.sort((a, b) => parseFloat(a.price_usd) - parseFloat(b.price_usd)), 
         sortBy: value ,
-        sortDescendingPrice: true
+        sortAscendingPrice: true,
+        nameClassName: 'arrow-icon',
+        rankClassName: 'arrow-icon',
+        priceClassName: 'visible' 
       });
 
     }
   }
-  updateInputValue = (e) => {
+  //takes user input and filters coins by it
+  getUserInput = (e) => {
     this.setState({userInput: e.target.value});
     
     if (this.state.coins !== null && e.target.value !== null) {
@@ -84,8 +107,9 @@ class App extends Component {
       this.setState({ coinsToDisplay: this.state.coins })
     }
   }
+  //after render gets the cryptocurrencies from the API
   componentDidMount () {
-    const url = 'https://api.coinmarketcap.com/v1/ticker/?limit=200';
+    const url = 'https://api.coinmarketcap.com/v1/ticker/?limit=500';
     fetch (url)
     .then (response => response.json ())
     .then (coins => {
@@ -94,21 +118,29 @@ class App extends Component {
         coinsToDisplay: coins
       });
     });
-    console.log ('Component did mount log');
   }
+
   render () {
     return (
       <div className="App">
+
         <Header />
-        <Search updateInputValue={this.updateInputValue}/>
+
+        <Search getUserInput={this.getUserInput}/>
+
         <CoinList 
           coinsToDisplay={this.state.coinsToDisplay} 
           setClass={this.setPriceClassName} 
           setSortingBy={this.setSortingBy} 
-          sortDescendingName={this.state.sortDescendingName}
-          sortDescendingRank={this.state.sortDescendingRank}
-          sortDescendingPrice={this.state.sortDescendingPrice}
+          sortAscendingName={this.state.sortAscendingName}
+          sortAscendingRank={this.state.sortAscendingRank}
+          sortAscendingPrice={this.state.sortAscendingPrice}
+          getClass={this.getClasName}
+          nameClassName={this.state.nameClassName}
+          rankClassName={this.state.rankClassName}
+          priceClassName={this.state.priceClassName}
         />
+
       </div>
     );
   }
