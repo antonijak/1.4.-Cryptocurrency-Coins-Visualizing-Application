@@ -22,12 +22,6 @@
   padding-left: .4rem;
 }
 
-svg {
-  width: 1.5rem; 
-  height: 1.5rem;
-}
-
-
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(167, 164, 164);
   opacity: 1; /* Firefox */

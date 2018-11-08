@@ -4,6 +4,7 @@ header {
   align-items: center;
   color: #595959;
   padding: 1rem;
+  cursor: default;
 }
 
 h1 {

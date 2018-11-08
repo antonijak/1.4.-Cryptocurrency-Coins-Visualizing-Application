@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box;
-}
 
 main {
   width: 70%;
@@ -40,6 +37,11 @@ main {
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
+}
+
+.legend-button:hover svg {
+  fill: rgb(79, 79, 79);
 }
 
 .legend-button:hover::after {
@@ -54,8 +56,39 @@ main {
   border-radius: 2px;
 }
 
+.legend-title {
+  width: 100%;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.legend-title span {
+  margin-left: .5rem;
+}
+
+.name {
+  border-right: 1px solid #f0f0f0;
+  width: 30%;
+  padding-left: 1rem;
+}
+
+.name .legend-title {
+  justify-content: flex-start;
+}
+
 .name:hover::after {
   content: "The name of the criptocurrency";
+}
+
+#name {
+  margin-left: 0;
+  margin-right: .5rem;
+}
+
+.rank {
+  width: 10%;
 }
 
 .rank:hover::after {
@@ -84,44 +117,7 @@ main {
 
 
 
-.legend-title {
-  width: 100%;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.legend-title span {
-  margin-left: .5rem;
-}
-
-#legend_flag {
-  padding: 0;
-  padding-left: 1.5rem;
-}
-
-.name {
-  border-right: 1px solid #f0f0f0;
-  width: 30%;
-  padding-left: 1rem;
-}
-
-#name {
-  margin-left: 0;
-  margin-right: .5rem;
-}
 
 
-.name .legend-title {
-  justify-content: flex-start;
-}
 
-.rank {
-  width: 10%;
-}
-
-.legend-button:hover svg {
-  fill: rgb(79, 79, 79);
-}
 
