@@ -4,4 +4,5 @@ This app allows you to search trough cryptocurrencies and sort by name, price an
 
 View  [demo](https://condescending-thompson-2b0a92.netlify.com/)
 
+(**IMPORTANT!** in order to fetch data disable ad blocker)
 ![](demo.gif)
