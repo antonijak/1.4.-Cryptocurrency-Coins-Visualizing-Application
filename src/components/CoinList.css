@@ -5,16 +5,16 @@ main {
   background-color: white;
   border: 1px solid #dedddd;
   border-top: none;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: .6rem;
+  border-bottom-right-radius: .6rem;
 }
 
 #container {
   width: 70%;
   border: 1px solid #dedddd;
   border-bottom: 1px solid #dedddd;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: .6rem;
+  border-top-right-radius: .6rem;
   background-color:  white;
   margin: auto;
 }
@@ -97,6 +97,8 @@ main {
   right: -10rem;
 }
 
+
+
 .price:hover::after {
   content: "The price in USD";
   left: 68%;
@@ -115,6 +117,34 @@ main {
   right: -8rem;
 }
 
+@media (max-width: 1024px){
+  main, #container {
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 768px){
+  html {
+    font-size: 12px;
+  }
+
+  #legend {
+    justify-content: space-between;
+  }
+
+  .rank {
+    width: 7%;
+  }
+
+  .price {
+    width: 12%;
+  }
+
+  .change {
+    width: 12%;
+  }
+}
 
 
 

@@ -17,7 +17,7 @@
 .coin-spec {
   width: 17.5%;
   padding: .5rem 1rem;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: right;
   height: 3rem;
   line-height: 2.1rem;
@@ -28,6 +28,8 @@
   border-right: 1px solid #f0f0f0;
   width: 30%;
 }
+
+
 
 .rank-coin {
   width: 10%;
@@ -40,3 +42,26 @@
 .red {
   color: rgb(249, 100, 100)
 }
+
+@media (max-width: 768px){
+  .coin {
+    justify-content: space-between;
+  }
+
+  .rank-coin {
+    width: 7%;
+  }
+
+  .price-coin {
+    width: 12%;
+  }
+
+  .amount-coin {
+    width: 25%;
+  }
+
+  .change-coin {
+    width: 12%;
+  }
+}
+
