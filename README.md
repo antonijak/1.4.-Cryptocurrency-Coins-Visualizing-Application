@@ -15,7 +15,7 @@
 
 `> git clone https://github.com/antonijak/1.4.-Cryptocurrency-Coins-Visualizing-Application.git`
 
-`> cd 1.6.-Blog-App-Redux-and-Router`
+`> cd 1.4.-Cryptocurrency-Coins-Visualizing-Application`
 
 `> yarn install`
 
