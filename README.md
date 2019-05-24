@@ -1,8 +1,24 @@
 # Cryptocurrency Coin Visualisation App
 
-This app allows you to search trough cryptocurrencies and sort by name, price and rank.
+### View [demo](https://condescending-thompson-2b0a92.netlify.com/)
 
-View  [demo](https://condescending-thompson-2b0a92.netlify.com/)
+## Technologies
 
-(**IMPORTANT!** in order to fetch data disable ad blocker)
+- React
+
+## Features
+
+- search trough cryptocurrencies
+- sort by name, price or rank
+
+## Getting started
+
+`> git clone https://github.com/antonijak/1.4.-Cryptocurrency-Coins-Visualizing-Application.git`
+
+`> cd 1.6.-Blog-App-Redux-and-Router`
+
+`> yarn install`
+
+`> yarn start`
+
 ![](demo.gif)
